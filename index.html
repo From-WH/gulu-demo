@@ -45,7 +45,11 @@
   <g-button icon="setting" icon-position="right" :loading="loading2" @click="loading2 = !loading2">
     设置
   </g-button>
-  <g-icon name="download"></g-icon>
+  <g-button-group icon="left">
+    <g-button icon="left">上一页</g-button>
+    <g-button>更多</g-button>
+    <g-button icon-position="right" icon="right">下一页</g-button>
+  </g-button-group>
 </div>
 <script src="src/app.js"></script>
 <script src="//at.alicdn.com/t/font_817980_nklue30rkq9.js"></script>
