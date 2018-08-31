@@ -10,3 +10,5 @@
     box-sizing: border-box;
    }
 ```
+
+本组件需要用parcel进行打包处理，需要您自行安装
