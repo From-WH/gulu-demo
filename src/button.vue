@@ -11,7 +11,17 @@
 
 <script>
   export default {
-    props:['icon','iconPosition']
+    // props:['icon','iconPosition']
+    props:{
+      icon:{},
+      iconPosition:{      //后面是值得配置
+        type:String,
+        default:'left',
+        validate(value){
+          return !(value !== 'right' && value !== 'left');
+        }
+      }
+    }
   }
 </script>
 
