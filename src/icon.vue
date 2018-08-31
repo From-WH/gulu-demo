@@ -5,11 +5,11 @@
 </template>
 <script>
   export default {
-    props:['name']
+    props: ['name']
   }
 </script>
 <style lang="scss">
-  .icon{
+  .icon {
     width: 1em;
     height: 1em;
   }

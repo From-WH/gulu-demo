@@ -11,16 +11,16 @@
 <script>
   export default {
     // props:['icon','iconPosition']
-    props:{
-      icon:{},
-      loading:{
+    props: {
+      icon: {},
+      loading: {
         type: Boolean,
         default: false,
       },
-      iconPosition:{      //后面是值得配置
-        type:String,
-        default:'left',
-        validator(value){
+      iconPosition: {      //后面是值得配置
+        type: String,
+        default: 'left',
+        validator(value) {
           return !(value !== 'right' && value !== 'left');
         }
       }
@@ -30,13 +30,14 @@
 
 <style lang="scss">
   @keyframes spin {
-    0%{
+    0% {
       transform: rotate(0deg);
     }
-    100%{
+    100% {
       transform: rotate(100deg);
     }
   }
+
   .g-button {
     font-size: var(--font-size);
     height: var(--button-height);
@@ -47,7 +48,7 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    vertical-align: middle;   /*上下对不齐就用*/
+    vertical-align: middle; /*上下对不齐就用*/
     &:hover {
       border-color: var(--border-color-hover);
     }
@@ -57,26 +58,26 @@
     &:focus {
       outline: none;
     }
-    >.content {
+    > .content {
       order: 2;
     }
-    >.icon{
-      order:1;
+    > .icon {
+      order: 1;
       margin-right: .1em;
     }
 
-    &.icon-right{
-      >.content{
-        order:1;
+    &.icon-right {
+      > .content {
+        order: 1;
       }
-      >.icon{
-        order:2;
+      > .icon {
+        order: 2;
         margin-left: .1em;
         margin-right: 0;
       }
     }
-    .loading{
-      animation:spin 2s infinite linear;
+    .loading {
+      animation: spin 2s infinite linear;
     }
   }
 
