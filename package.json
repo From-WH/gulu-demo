@@ -18,6 +18,7 @@
   "homepage": "https://github.com/From-WH/gulu-demo#readme",
   "devDependencies": {
     "@vue/component-compiler-utils": "^2.2.0",
+    "chai": "^4.1.2",
     "node-sass": "^4.9.3",
     "vue-template-compiler": "^2.5.17"
   },
