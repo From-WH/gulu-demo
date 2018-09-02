@@ -4,7 +4,8 @@
   "description": "这是一个VUE UI框架",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev-test": "parcel watch test/* --no-cache & karma start",
+    "test": "parcel build test/* --no-cache --no-minify && karma start --single-run"
   },
   "repository": "git+https://github.com/From-WH/gulu-demo.git",
   "keywords": [
