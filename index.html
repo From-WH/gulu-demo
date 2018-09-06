@@ -36,20 +36,32 @@
 </head>
 <body>
 <div id="app">
-  <g-button :loading="loading" @click="loading = !loading">
-    设置
-  </g-button>
-  <g-button icon="setting" :loading="loading1" @click="loading1 = !loading1">
-    设置
-  </g-button>
-  <g-button icon="setting" icon-position="right" :loading="loading2" @click="loading2 = !loading2">
-    设置
-  </g-button>
-  <g-button-group icon="left">
-    <g-button icon="left">上一页</g-button>
-    <g-button>更多</g-button>
-    <g-button icon-position="right" icon="right">下一页</g-button>
-  </g-button-group>
+  <div class="box" style="margin-bottom: 20px;">
+    <g-input value="张三"></g-input>
+    <g-input value="张三" disabled></g-input>
+    <g-input value="张三" readonly></g-input>
+  </div>
+  <div class="box">
+    <g-input value="阿" error="姓名不能小于两个字"></g-input>
+  </div>
+  <div class="box">
+    <div style="margin-top: 20px;">
+      <g-button :loading="loading" @click="loading = !loading">
+        设置
+      </g-button>
+      <g-button icon="setting" :loading="loading1" @click="loading1 = !loading1">
+        设置
+      </g-button>
+      <g-button icon="setting" icon-position="right" :loading="loading2" @click="loading2 = !loading2">
+        设置
+      </g-button>
+      <g-button-group icon="left">
+        <g-button icon="left">上一页</g-button>
+        <g-button>更多</g-button>
+        <g-button icon-position="right" icon="right">下一页</g-button>
+      </g-button-group>
+    </div>
+  </div>
 </div>
 <div id="test"></div>
 <script src="src/app.js"></script>
