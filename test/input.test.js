@@ -77,9 +77,14 @@ describe('事件', () => {
     vm.$on('input', callback)
     //触发input,change事件
     let event = new Event('input')
+    Object.defineProperty(
+      event,'target',{
+        value:{value:'hi'},enumerable:true
+      }
+    )
     const inputElement = vm.$el.querySelector('input');
     inputElement.dispatchEvent(event);
-    expect(callback).to.have.been.called
+    expect(callback).to.have.been.calledWith('hi')
     vm.$destroy()
   });
   it('focus', () => {
