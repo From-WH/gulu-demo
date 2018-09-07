@@ -45,10 +45,16 @@
     <g-input value="张三" readonly></g-input>
   </div>
   <div class="box">
-    <g-input value="张三" error="姓名不能小于两个字"></g-input>
+    <g-input value="张二" error="姓名不能小于两个字"></g-input>
   </div>
   <div class="box">
-    <g-input value="张三" @change="inputChange"></g-input>
+    <g-input value="张四" @change="inputChange"></g-input>
+  </div>
+  <div class="box">
+    <p>双向绑定</p>
+    <g-input v-model="message"></g-input>
+    <br>
+    <span>{{message}}</span>
   </div>
   <div class="box">
     <div style="margin-top: 20px;">
