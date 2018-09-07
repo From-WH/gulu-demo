@@ -29,6 +29,9 @@
     body {
       font-size: var(--font-size);
     }
+    .box{
+      margin-bottom: 20px;
+    }
   </style>
   <style>
 
@@ -42,7 +45,10 @@
     <g-input value="张三" readonly></g-input>
   </div>
   <div class="box">
-    <g-input value="阿" error="姓名不能小于两个字"></g-input>
+    <g-input value="张三" error="姓名不能小于两个字"></g-input>
+  </div>
+  <div class="box">
+    <g-input value="张三" @change="inputChange"></g-input>
   </div>
   <div class="box">
     <div style="margin-top: 20px;">
