@@ -1,5 +1,5 @@
 <template>
-  <div class="row" :style="rowStyle" >
+  <div class="row" :style="rowStyle" :class="rowClass">
   <slot></slot>
   </div>
 </template>
@@ -15,6 +15,10 @@
       rowStyle(){
         let {gutter} = this
         return {marginRight:-gutter/2+'px' ,marginLeft:-gutter/2+'px'}
+      },
+      rowClass(){
+        let {align} = this
+        return [align && `align-${align}`]
       }
     },
     mounted(){
@@ -27,5 +31,14 @@
 <style scoped lang="scss">
   .row {
     display: flex;
+    &.align-left{
+      justify-content: flex-start;
+    }
+    &.align-right{
+      justify-content: flex-end;
+    }
+    &.align-center{
+      justify-content: center;
+    }
   }
 </style>
