@@ -29,16 +29,26 @@
     body {
       font-size: var(--font-size);
     }
-    .box{
+
+    .box {
       margin-bottom: 20px;
     }
   </style>
   <style>
-
+    .demo {
+      background: #333;
+      border: 1px solid red;
+      height: 100px;
+    }
   </style>
 </head>
 <body>
 <div id="app">
+  <g-row>
+    <g-col span="23" offset="1" :narrow-pc="{span:12,offset:12}">
+      <div class="demo"></div>
+    </g-col>
+  </g-row>
   <g-row gutter="20">
     <g-col span="2"
            :ipad="{span:8}"
@@ -80,7 +90,7 @@
     <g-col span="18" offset="2">2</g-col>
   </g-row>
   <g-row gutter="20">
-    <g-col span="4" >1</g-col>
+    <g-col span="4">1</g-col>
     <g-col span="4" offset="2">1</g-col>
     <g-col span="16" offset="2">2</g-col>
   </g-row>
