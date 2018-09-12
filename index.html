@@ -23,7 +23,7 @@
     }
 
     #app {
-      margin: 20px;
+
     }
 
     body {
@@ -36,99 +36,106 @@
   </style>
   <style>
     .demo {
-      background: #333;
-      border: 1px solid red;
-      height: 100px;
+      min-height: 100px;
     }
   </style>
 </head>
 <body>
 <div id="app">
-  <g-row>
-    <g-col span="23" offset="1" :narrow-pc="{span:12,offset:12}">
-      <div class="demo"></div>
-    </g-col>
-  </g-row>
-  <g-row gutter="20">
-    <g-col span="2"
-           :ipad="{span:8}"
-           :narrow-pc="{span:4}"
-           :pc="{span:2}"
-           :wide-pc="{span:1}"
-    >
-      1
-    </g-col>
-    <g-col span="22"
-           :ipad="{span:16}"
-           :narrow-pc="{span:20}"
-           :pc="{span:22}"
-           :wide-pc="{span:23}"
-    >11
-    </g-col>
-  </g-row>
-  <g-row gutter="20">
-    <g-col>1</g-col>
-    <g-col>2</g-col>
-    <g-col>3</g-col>
-  </g-row>
-  <g-row gutter="20">
-    <g-col span="6">1</g-col>
-    <g-col span="4">2</g-col>
-    <g-col span="6">3</g-col>
-    <g-col span="8">4</g-col>
-  </g-row>
-  <g-row gutter="20">
-    <g-col span="2">1</g-col>
-    <g-col span="22">2</g-col>
-  </g-row>
-  <g-row gutter="20">
-    <g-col span="4">1</g-col>
-    <g-col span="20">2</g-col>
-  </g-row>
-  <g-row gutter="20">
-    <g-col span="6">1</g-col>
-    <g-col span="18" offset="2">2</g-col>
-  </g-row>
-  <g-row gutter="20">
-    <g-col span="4">1</g-col>
-    <g-col span="4" offset="2">1</g-col>
-    <g-col span="16" offset="2">2</g-col>
-  </g-row>
-  <div class="box" style="margin-bottom: 20px;">
-    <g-input value="张三"></g-input>
-    <g-input value="张三" disabled></g-input>
-    <g-input value="张三" readonly></g-input>
-  </div>
-  <div class="box">
-    <g-input value="张二" error="姓名不能小于两个字"></g-input>
-  </div>
-  <div class="box">
-    <g-input value="张四" @change="inputChange"></g-input>
-  </div>
-  <div class="box">
-    <p>双向绑定</p>
-    <g-input v-model="message"></g-input>
-    <br>
-    <span>{{message}}</span>
-  </div>
-  <div class="box">
-    <div style="margin-top: 20px;">
-      <g-button :loading="loading" @click="loading = !loading">
-        设置
-      </g-button>
-      <g-button icon="setting" :loading="loading1" @click="loading1 = !loading1">
-        设置
-      </g-button>
-      <g-button icon="setting" icon-position="right" :loading="loading2" @click="loading2 = !loading2">
-        设置
-      </g-button>
-      <g-button-group icon="left">
-        <g-button icon="left">上一页</g-button>
-        <g-button>更多</g-button>
-        <g-button icon-position="right" icon="right">下一页</g-button>
-      </g-button-group>
-    </div>
-  </div>
+  <g-layout>
+    <g-sider>sider</g-sider>
+    <g-layout>
+      <g-header>header</g-header>
+      <g-content>content</g-content>
+      <g-footer>footer</g-footer>
+    </g-layout>
+
+  </g-layout>
+  <!--<g-row>-->
+    <!--<g-col span="23" offset="1" :narrow-pc="{span:12,offset:12}">-->
+      <!--<div class="demo"></div>-->
+    <!--</g-col>-->
+  <!--</g-row>-->
+  <!--<g-row gutter="20">-->
+    <!--<g-col span="2"-->
+           <!--:ipad="{span:8}"-->
+           <!--:narrow-pc="{span:4}"-->
+           <!--:pc="{span:2}"-->
+           <!--:wide-pc="{span:1}"-->
+    <!--&gt;-->
+      <!--1-->
+    <!--</g-col>-->
+    <!--<g-col span="22"-->
+           <!--:ipad="{span:16}"-->
+           <!--:narrow-pc="{span:20}"-->
+           <!--:pc="{span:22}"-->
+           <!--:wide-pc="{span:23}"-->
+    <!--&gt;11-->
+    <!--</g-col>-->
+  <!--</g-row>-->
+  <!--<g-row gutter="20">-->
+    <!--<g-col>1</g-col>-->
+    <!--<g-col>2</g-col>-->
+    <!--<g-col>3</g-col>-->
+  <!--</g-row>-->
+  <!--<g-row gutter="20">-->
+    <!--<g-col span="6">1</g-col>-->
+    <!--<g-col span="4">2</g-col>-->
+    <!--<g-col span="6">3</g-col>-->
+    <!--<g-col span="8">4</g-col>-->
+  <!--</g-row>-->
+  <!--<g-row gutter="20">-->
+    <!--<g-col span="2">1</g-col>-->
+    <!--<g-col span="22">2</g-col>-->
+  <!--</g-row>-->
+  <!--<g-row gutter="20">-->
+    <!--<g-col span="4">1</g-col>-->
+    <!--<g-col span="20">2</g-col>-->
+  <!--</g-row>-->
+  <!--<g-row gutter="20">-->
+    <!--<g-col span="6">1</g-col>-->
+    <!--<g-col span="18" offset="2">2</g-col>-->
+  <!--</g-row>-->
+  <!--<g-row gutter="20">-->
+    <!--<g-col span="4">1</g-col>-->
+    <!--<g-col span="4" offset="2">1</g-col>-->
+    <!--<g-col span="16" offset="2">2</g-col>-->
+  <!--</g-row>-->
+  <!--<div class="box" style="margin-bottom: 20px;">-->
+    <!--<g-input value="张三"></g-input>-->
+    <!--<g-input value="张三" disabled></g-input>-->
+    <!--<g-input value="张三" readonly></g-input>-->
+  <!--</div>-->
+  <!--<div class="box">-->
+    <!--<g-input value="张二" error="姓名不能小于两个字"></g-input>-->
+  <!--</div>-->
+  <!--<div class="box">-->
+    <!--<g-input value="张四" @change="inputChange"></g-input>-->
+  <!--</div>-->
+  <!--<div class="box">-->
+    <!--<p>双向绑定</p>-->
+    <!--<g-input v-model="message"></g-input>-->
+    <!--<br>-->
+    <!--<span>{{message}}</span>-->
+  <!--</div>-->
+  <!--<div class="box">-->
+    <!--<div style="margin-top: 20px;">-->
+      <!--<g-button :loading="loading" @click="loading = !loading">-->
+        <!--设置-->
+      <!--</g-button>-->
+      <!--<g-button icon="setting" :loading="loading1" @click="loading1 = !loading1">-->
+        <!--设置-->
+      <!--</g-button>-->
+      <!--<g-button icon="setting" icon-position="right" :loading="loading2" @click="loading2 = !loading2">-->
+        <!--设置-->
+      <!--</g-button>-->
+      <!--<g-button-group icon="left">-->
+        <!--<g-button icon="left">上一页</g-button>-->
+        <!--<g-button>更多</g-button>-->
+        <!--<g-button icon-position="right" icon="right">下一页</g-button>-->
+      <!--</g-button-group>-->
+    <!--</div>-->
+  <!--</div>-->
 </div>
 <div id="test"></div>
 <script src="src/app.js"></script>
