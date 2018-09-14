@@ -6,7 +6,30 @@
 <script>
 
   export default {
-    name:'GuluToast'
+    name:'GuluToast',
+    props:{
+      autoClose:{
+        type:Boolean,
+        default:true
+      },
+      autoCloseDely:{
+        type: Number,
+        default: 2
+      }
+    },
+    mounted(){
+      if(this.autoClose){
+        setTimeout(()=>{
+          this.close()
+        },this.autoCloseDely * 1000)
+      }
+    },
+    methods:{
+      close(){
+        this.$el.remove()
+        this.$destroy()
+      }
+    }
   }
 </script>
 <style lang="scss" scoped>
