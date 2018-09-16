@@ -6,17 +6,15 @@
 </template>
 <script>
   export default {
-    name:'GuluHeader',
-    data(){
-      return{
-
-      }
+    name: 'GuluHeader',
+    data() {
+      return {}
     }
 
   }
 </script>
 <style lang="scss" scoped>
-  .header{
+  .header {
     height: 100px;
     background-color: #777;
   }

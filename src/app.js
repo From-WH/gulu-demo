@@ -19,12 +19,12 @@ Vue.component('g-button-group', ButtonGroup);
 Vue.component('g-input', Input);
 Vue.component('g-row', Row);
 Vue.component('g-col', Col);
-Vue.component('g-layout',Layout);
-Vue.component('g-content',Content);
-Vue.component('g-header',Header);
-Vue.component('g-footer',Footer);
-Vue.component('g-sider',Sider);
-Vue.component('g-toast',Toast);
+Vue.component('g-layout', Layout);
+Vue.component('g-content', Content);
+Vue.component('g-header', Header);
+Vue.component('g-footer', Footer);
+Vue.component('g-sider', Sider);
+Vue.component('g-toast', Toast);
 Vue.use(plugin)
 
 new Vue({
@@ -33,13 +33,13 @@ new Vue({
     loading: false,
     loading1: false,
     loading2: false,
-    message:'张三'
+    message: '张三'
   },
-  created(){
+  created() {
 
   },
   methods: {
-    showToast(){
+    showToast() {
       this.$toast('我是message')
     }
   }

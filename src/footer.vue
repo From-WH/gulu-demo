@@ -4,7 +4,7 @@
   </div>
 </template>
 <style lang="scss" scoped>
-  .footer{
+  .footer {
     height: 50px;
     background-color: #999;
   }

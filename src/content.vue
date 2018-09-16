@@ -4,7 +4,7 @@
   </div>
 </template>
 <style lang="scss" scoped>
-  .content{
+  .content {
     background-color: #fff;
     flex-grow: 1;
   }

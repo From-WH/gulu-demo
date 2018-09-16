@@ -6,17 +6,17 @@
 <script>
   export default {
     name: 'GuluLayout',
-    data(){
-      return{
-        layoutClass:{
-          hasSider:false
+    data() {
+      return {
+        layoutClass: {
+          hasSider: false
         }
       }
     },
     mounted() {
       this.$children.forEach((vm) => {
-        if(vm.$options.name === 'GuluSider'){
-           this.layoutClass.hasSider = true
+        if (vm.$options.name === 'GuluSider') {
+          this.layoutClass.hasSider = true
         }
       })
     }
@@ -28,7 +28,7 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
-    &.hasSider{
+    &.hasSider {
       flex-direction: row;
     }
   }
