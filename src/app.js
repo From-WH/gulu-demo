@@ -40,7 +40,17 @@ new Vue({
   },
   methods: {
     showToast() {
-      this.$toast('我是message')
+      this.$toast('我是message', {
+        closeButton: {
+          text: '关闭',
+          default() {   //如果是一个对象必须写成这样，
+            callback()
+            {
+              console.log('用户说他知道了');
+            }
+          }
+        }
+      })
     }
   }
 });
