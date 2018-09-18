@@ -24,7 +24,7 @@
         type: Boolean,
         default: false
       },
-      autoCloseDely: {
+      autoCloseDelay: {
         type: Number,
         default: 2
       },
@@ -59,7 +59,7 @@
         if (this.autoClose) {
           setTimeout(() => {
             this.close()
-          }, this.autoCloseDely * 1000)
+          }, this.autoCloseDelay * 1000)
         }
       },
       upDateStyle() {
