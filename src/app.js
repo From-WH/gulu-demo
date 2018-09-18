@@ -41,7 +41,7 @@ new Vue({
   },
   methods: {
     showToast() {
-      this.$toast('hello world', {
+      this.$toast(`${parseInt(Math.random()*100)}hello world`, {
         inableHtml:true,
         position: 'middle',
       })
