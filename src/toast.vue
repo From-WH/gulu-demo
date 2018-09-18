@@ -1,5 +1,5 @@
 <template>
-  <div class="toast" ref="toast">
+  <div class="toast" ref="toast" :class="toastClasses">
     <div class="message">
       <slot v-if="!inableHtml"></slot>
       <div v-else v-html="$slots.default[0]"></div>
@@ -13,9 +13,16 @@
   export default {
     name: 'GuluToast',
     props: {
+      position: {
+        type: String,
+        default: 'top',
+        visible: function (value) {
+          return ['top', 'bottom', 'middle'].indexOf(value) >= 0
+        }
+      },
       autoClose: {
         type: Boolean,
-        default: true
+        default: false
       },
       autoCloseDely: {
         type: Number,
@@ -35,21 +42,28 @@
       }
 
     },
+    computed: {
+      toastClasses() {
+        return {
+          [`position-${this.position}`]: true
+        }
+      }
+    },
     mounted() {
       this.upDateStyle()
       this.execAutoClose()
 
     },
     methods: {
-      execAutoClose(){
+      execAutoClose() {
         if (this.autoClose) {
           setTimeout(() => {
             this.close()
           }, this.autoCloseDely * 1000)
         }
       },
-      upDateStyle(){
-        this.$nextTick(()=>{
+      upDateStyle() {
+        this.$nextTick(() => {
           this.$refs.line.style.height = `${this.$refs.toast.getBoundingClientRect().height}px`
         })
       },
@@ -80,24 +94,34 @@
     display: flex;
     align-items: center;
     position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
     color: white;
     border-radius: 6px;
     background: $toast-bg;
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, .5);
+    left: 50%;
     .close {
       padding: 0 8px;
       flex-shrink: 0;
     }
-    .message{
+    .message {
       padding: 8px 8px;
     }
     .line {
       height: 100%;
       border-left: 1px solid #999;
       margin-left: 8px;
+    }
+    &.position-top {
+      top: 0;
+      transform: translateX(-50%);
+    }
+    &.position-bottom {
+      bottom: 0;
+      transform: translateX(-50%);
+    }
+    &.position-middle {
+      top: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 </style>
