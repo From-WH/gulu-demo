@@ -40,10 +40,19 @@ new Vue({
 
   },
   methods: {
-    showToast() {
-      this.$toast(`${parseInt(Math.random()*100)}hello world`, {
-        inableHtml:true,
-        position: 'middle',
+    showToast1(){
+      this.showToast('top')
+    },
+    showToast2(){
+      this.showToast('middle')
+    },
+    showToast3(){
+      this.showToast('bottom')
+    },
+    showToast(position) {
+      this.$toast(`你的智商只有${parseInt(Math.random()*100)}，需要充值吗？`, {
+        enableHtml:true,
+        position,
       })
     }
   }

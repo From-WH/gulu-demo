@@ -32,11 +32,11 @@
         type: Object,
         default() {   //如果是一个对象必须写成这样，
           return {
-            text: '关闭', callback: undefined
+            text: '需要', callback: undefined
           }
         }
       },
-      inableHtml: {
+      enableHtml: {
         type: Boolean,
         default: false
       }
@@ -73,9 +73,6 @@
           this.closeButton.callback(this)  //this就是这个toast实例
         }
       },
-      log() {
-        console.log('测试');
-      },
       close() {
         this.$el.remove()
         this.$emit('close')
@@ -88,9 +85,17 @@
   $font-size: 14px;
   $toast-min-height: 40px;
   $toast-bg: rgba(0, 0, 0, 0.75);
-  @keyframes fade-in {
-    0%{opacity: 0}
-    100%{opacity: 1}
+  @keyframes slide-up {
+    0%{opacity: 0; transform: translate(-50%,100%) }
+    100%{opacity: 1;transform: translate(-50%,0%)}
+  }
+  @keyframes middle {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+  }
+  @keyframes slide-down {
+    0%{opacity: 0; transform: translate(-50%,-100%) }
+    100%{opacity: 1;transform: translate(-50%,0%)}
   }
   .toast {
     animation: fade-in 0.5s;
@@ -119,15 +124,22 @@
     }
     &.position-top {
       top: 0;
+      animation: slide-down .5s;
       transform: translateX(-50%);
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
     }
     &.position-bottom {
       bottom: 0;
+      animation: slide-up .5s;
       transform: translateX(-50%);
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
     }
     &.position-middle {
       top: 50%;
-      transform: translate(-50%, -50%);
+      animation: middle .5s;
+      transform: translateX(-50%);
     }
   }
 </style>
