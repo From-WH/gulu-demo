@@ -1,7 +1,7 @@
 <template>
   <div class="toast" ref="toast" :class="toastClasses">
     <div class="message">
-      <slot v-if="!inableHtml"></slot>
+      <slot v-if="!enableHtml"></slot>
       <div v-else v-html="$slots.default[0]"></div>
     </div>
     <div class="line" ref="line"></div>

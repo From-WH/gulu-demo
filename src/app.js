@@ -51,8 +51,9 @@ new Vue({
     },
     showToast(position) {
       this.$toast(`你的智商只有${parseInt(Math.random()*100)}，需要充值吗？`, {
-        enableHtml:true,
+        enableHtml:false,
         position,
+
       })
     }
   }
