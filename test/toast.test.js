@@ -10,7 +10,7 @@ describe('Toast', () => {
     expect(Toast).to.be.ok
   });
   describe('props', function () {
-    it('自动关闭 autoClose', (done) => {
+    it('接受 autoClose', (done) => {
       let div = document.createElement('div')
       document.body.appendChild(div)
       const Constructor = Vue.extend(Toast);
@@ -25,7 +25,7 @@ describe('Toast', () => {
         done()
       })
     });
-    it('自动关闭 closeButton', () => {
+    it('接受 closeButton', (done) => {
       const callback = sinon.fake()
       let div = document.createElement('div')
       document.body.appendChild(div)
@@ -40,10 +40,13 @@ describe('Toast', () => {
       }).$mount();
       let closeButton = vm.$el.querySelector('.close')
       expect(closeButton.textContent.trim()).to.eq('关闭我')
-      closeButton.click()
-      expect(callback).to.have.called
+      setTimeout(()=>{
+        closeButton.click()
+        expect(callback).to.have.called
+        done()
+      })
     });
-    it('接受enableHtml', () => {
+    it('接受 enableHtml', () => {
       const Constructor = Vue.extend(Toast);
       const vm = new Constructor({
         propsData: {
@@ -55,7 +58,7 @@ describe('Toast', () => {
       let strong = vm.$el.querySelector('#test')
       expect(strong).to.exist
     });
-    it('接受一个position', () => {
+    it('接受 position', () => {
       const Constructor = Vue.extend(Toast);
       const vm = new Constructor({
         propsData: {

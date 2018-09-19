@@ -32,7 +32,8 @@
         type: Object,
         default() {   //如果是一个对象必须写成这样，
           return {
-            text: '需要', callback: undefined
+            text: '需要',
+            callback: undefined
           }
         }
       },

@@ -30,7 +30,6 @@ Vue.use(plugin)
 new Vue({
   el: '#app',
   data: {
-
     loading: false,
     loading1: false,
     loading2: false,
