@@ -1,5 +1,5 @@
 <template>
-  <div class="tabs-header">
+  <div class="tabs-head">
     <slot></slot>
   </div>
 
@@ -7,7 +7,7 @@
 
 <script>
   export default {
-    name:'GuluTabs'
+    name:'GuluTabsHead'
   }
 </script>
 <style lang="scss" scoped></style>
