@@ -15,8 +15,8 @@ import plugin from './plugin'
 import Tabs from './tabs'
 import TabsBody from './tabs-body'
 import TabHead from './tabs-head'
-import TabsItem from 'tabs-item'
-import TabsPane from 'tabs-pane'
+import TabsItem from './tabs-item'
+import TabsPane from './tabs-pane'
 
 Vue.component('g-button', Button);
 Vue.component('g-icon', Icon);
@@ -30,11 +30,11 @@ Vue.component('g-header', Header);
 Vue.component('g-footer', Footer);
 Vue.component('g-sider', Sider);
 Vue.component('g-toast', Toast);
-Vue.component('g-tabs',Tabs);
-Vue.component('g-tabs-header',TabHead);
-Vue.component('g-tabs-body',TabsBody);
-Vue.component('g-tabs-item',TabsItem);
-Vue.component('g-tabs-pane',TabsPane);
+Vue.component('g-tabs', Tabs);
+Vue.component('g-tabs-head', TabHead);
+Vue.component('g-tabs-body', TabsBody);
+Vue.component('g-tabs-item', TabsItem);
+Vue.component('g-tabs-pane', TabsPane);
 
 Vue.use(plugin);
 
@@ -50,18 +50,18 @@ new Vue({
 
   },
   methods: {
-    showToast1(){
+    showToast1() {
       this.showToast('top')
     },
-    showToast2(){
+    showToast2() {
       this.showToast('middle')
     },
-    showToast3(){
+    showToast3() {
       this.showToast('bottom')
     },
     showToast(position) {
-      this.$toast(`你的智商只有${parseInt(Math.random()*100)}，需要充值吗？`, {
-        enableHtml:false,
+      this.$toast(`你的智商只有${parseInt(Math.random() * 100)}，需要充值吗？`, {
+        enableHtml: false,
         position,
 
       })

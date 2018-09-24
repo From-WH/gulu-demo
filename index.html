@@ -42,9 +42,40 @@
 </head>
 <body>
 <div id="app">
-  <button @click="showToast1">top</button>
-  <button @click="showToast2">middle</button>
-  <button @click="showToast3">bottom</button>
+  <g-tabs :selected.sync="selectedTab">
+    <g-tabs-head>
+      <template slot="actions">
+        <button>设置</button>
+      </template>
+      <g-tabs-item name="women">
+        美女
+      </g-tabs-item>
+      <g-tabs-item name="finance" desabled>
+        财经
+      </g-tabs-item>
+      <g-tabs-item name="sprots">
+        体育
+      </g-tabs-item>
+    </g-tabs-head>
+    <g-tabs-body>
+      <g-tabs-pane name="women">
+        美女信息
+      </g-tabs-pane>
+      <g-tabs-pane>
+        财经信息
+      </g-tabs-pane>
+      <g-tabs-span>
+        体育信息
+      </g-tabs-span>
+    </g-tabs-body>
+  </g-tabs>
+
+
+  <!--toast组件测试-->
+  <!--<button @click="showToast1">top</button>-->
+  <!--<button @click="showToast2">middle</button>-->
+  <!--<button @click="showToast3">bottom</button>-->
+  <!--布局-->
   <!--<g-layout>-->
   <!--<g-sider>sider</g-sider>-->
   <!--<g-layout>-->
