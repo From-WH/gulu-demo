@@ -7,7 +7,13 @@
 
 <script>
   export default {
-    name:'GuluTabsPane'
+    name:'GuluTabsPane',
+    inject:['eventBus'],
+    created(){
+      this.eventBus.$on('update:selected',(name)=>{
+        console.log(name);
+      })
+    }
   }
 </script>
 <style lang="scss" scoped></style>
