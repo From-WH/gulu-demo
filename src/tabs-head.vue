@@ -13,12 +13,14 @@
   export default {
     name: 'GuluTabsHead',
     inject: ['eventBus'],
-    mounted(){
-      this.eventBus.$on('update.selected',(item,vm)=>{
-        let {width,height} = vm.$el.getBoundingClientRect()
-
+    mounted() {
+      this.eventBus.$on('update:selected', (item, vm) => {
+        let {width, height, top, left} = vm.$el.getBoundingClientRect()
+        console.log(width, height, top, left);
+        this.$refs.line.style.width = `${width}px`
+        this.$refs.line.style.left = `${left}px`
       })
-    }
+    },
   }
 </script>
 <style lang="scss" scoped>
@@ -28,11 +30,11 @@
     height: $tab-height;
     justify-content: flex-start;
     position: relative;
-    > .line{
+    > .line {
       position: absolute;
       bottom: 0;
-      width: 100px;
       border-bottom: 1px solid blue;
+      transition: all .5s;
     }
     > .actions-wrapper {
       margin-left: auto;
