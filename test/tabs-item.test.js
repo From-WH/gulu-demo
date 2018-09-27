@@ -26,7 +26,7 @@ describe('TabsItem', () => {
         name: 'xxx'
       }
     }).$mount();
-    expect(vm.$el.getAttribute('data-name')).to.eq('xxx')
+    expect(vm.$el.getAttribute('data-name')).to.eq('xxx');
     vm.$destroy()
   });
   it('接受disabled属性', function () {
@@ -36,15 +36,11 @@ describe('TabsItem', () => {
         disabled: true
       }
     }).$mount();
-    expect(vm.$el.classList.contains('disabled')).to.true
+    expect(vm.$el.classList.contains('disabled')).to.true;
     const callback = sinon.fake();
     vm.$on('click', callback);
     vm.$el.click();
-    expect(callback).to.have.not.been.called
-
+    expect(callback).to.have.not.been.called;
     vm.$destroy()
   });
-  // it('接受direction和prop', function () {
-  //
-  // });
 });
