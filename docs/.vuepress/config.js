@@ -1,4 +1,5 @@
 module.exports = {
+  base:'/gulu-demo/',
   title:'车轮滚滚 UI',
   themeConfig: {
     sidebar: [
