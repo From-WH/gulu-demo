@@ -118,8 +118,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/deploy.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="22" selection-start-line="22" selection-end-line="22" selection-end-column="64" />
+            <state relative-caret-position="456">
+              <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -470,7 +470,7 @@
       <workItem from="1538040653156" duration="1020000" />
       <workItem from="1538054171714" duration="11002000" />
       <workItem from="1538126945256" duration="1573000" />
-      <workItem from="1538146008571" duration="2368000" />
+      <workItem from="1538146008571" duration="2975000" />
     </task>
     <task id="LOCAL-00017" summary="介入travis">
       <created>1535868059383</created>
@@ -819,7 +819,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="237764000" />
+    <option name="totallyTimeSpent" value="238371000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1306,8 +1306,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/deploy.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" selection-start-line="22" selection-end-line="22" selection-end-column="64" />
+        <state relative-caret-position="456">
+          <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
         </state>
       </provider>
     </entry>
