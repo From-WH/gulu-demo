@@ -1,7 +1,6 @@
 <template>
   <div class="header">
     <slot></slot>
-    <button>open</button>
   </div>
 </template>
 <script>
@@ -9,13 +8,17 @@
     name: 'GuluHeader',
     data() {
       return {}
+    },
+    methods:{
+      // open(){
+      //   this.$on('visiable')
+      // }
     }
-
   }
 </script>
 <style lang="scss" scoped>
   .header {
     height: 100px;
-    background-color: #777;
+    background-color: #87CEFA;
   }
 </style>

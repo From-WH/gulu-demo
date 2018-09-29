@@ -9,6 +9,9 @@
   export default {
     name:'GuluTabsBody',
     inject:['eventBus'],
+    mounted(){
+
+    }
   }
 </script>
 <style lang="scss" scoped>

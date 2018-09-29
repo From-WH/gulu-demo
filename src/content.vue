@@ -6,7 +6,9 @@
 
 <style lang="scss" scoped>
   .content {
-    background-color: #fff;
+    background-color: #00BFFF;
     flex-grow: 1;
+    width: 100%;
+    padding: 0;
   }
 </style>

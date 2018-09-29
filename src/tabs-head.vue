@@ -16,9 +16,8 @@
     mounted() {
       this.eventBus.$on('update:selected', (item, vm) => {
         let {width, height, top, left} = vm.$el.getBoundingClientRect()
-        console.log(width, height, top, left);
         this.$refs.line.style.width = `${width}px`
-        this.$refs.line.style.left = `${left}px`
+        this.$refs.line.style.left = `${left - 550}px`
       })
     },
   }
@@ -38,7 +37,7 @@
       border-bottom: 1px solid blue;
       transition: all .5s;
     }
-    > .actions-wrapper {
+    > &.actions-wrapper {
       margin-left: auto;
       display: flex;
       align-items: center;

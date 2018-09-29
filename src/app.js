@@ -9,12 +9,12 @@ import Layout from './layout'
 import Content from './content'
 import Header from './header'
 import Footer from './footer'
-import Sider from './sider'
+import Slider from './slider'
 import Toast from './toast'
 import plugin from './plugin'
 import Tabs from './tabs'
 import TabsBody from './tabs-body'
-import TabHead from './tabs-head'
+import TabsHead from './tabs-head'
 import TabsItem from './tabs-item'
 import TabsPane from './tabs-pane'
 
@@ -28,10 +28,10 @@ Vue.component('g-layout', Layout);
 Vue.component('g-content', Content);
 Vue.component('g-header', Header);
 Vue.component('g-footer', Footer);
-Vue.component('g-sider', Sider);
+Vue.component('g-slider', Slider);
 Vue.component('g-toast', Toast);
 Vue.component('g-tabs', Tabs);
-Vue.component('g-tabs-head', TabHead);
+Vue.component('g-tabs-head', TabsHead);
 Vue.component('g-tabs-body', TabsBody);
 Vue.component('g-tabs-item', TabsItem);
 Vue.component('g-tabs-pane', TabsPane);

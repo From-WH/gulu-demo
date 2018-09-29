@@ -5,7 +5,7 @@
 </template>
 <style lang="scss" scoped>
   .footer {
-    height: 50px;
-    background-color: #999;
+    height: 100px;
+    background-color: #87CEFA;
   }
 </style>

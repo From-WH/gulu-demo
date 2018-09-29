@@ -1,38 +1,49 @@
 <template>
   <transition name="slide-slide">
-    <div class="sider" v-if="visible">
+    <div class="slider" v-if="visible">
       <slot></slot>
-      <button @click="visible = false">X</button>
+      <button class="button" @click="close">关闭</button>
     </div>
   </transition>
 </template>
 <script>
   export default {
-    name: 'GuluSider',
+    name: 'GuluSlider',
     data() {
       return {
         visible: true,
       }
     },
+    methods:{
+      close(){
+        this.visible = false
+      },
+      open(){
+        this.visible = true
+      }
+    }
   }
 </script>
 <style lang="scss" scoped>
-  .sider {
+  .slider {
     width: 100px;
-    background: #333;
+    background: #91B7F7;
     position: relative;
   }
 
-  .hasSider {
+  .hasSlider {
     flex-direction: row;
   }
-
-  button {
+  .button {
+    color: white;
+    border: none;
+    padding: 3px;
+    border-radius: 2px;
+    background-color: #6196cc ;
     position: absolute;
     top: 0;
     right: 0;
   }
-
   .slide-slide-leave-active {
     transition: transform;
   }
