@@ -77,15 +77,15 @@
   <!--<button @click="showToast3">bottom</button>-->
 
 
-  <!--<h1>布局</h1>-->
-  <!--<g-layout style="height: 100%">-->
-      <!--<g-slider>slider</g-slider>-->
-      <!--<g-layout>-->
-        <!--<g-header>header</g-header>-->
-        <!--<g-content style="height: 300px; background-color: red" >content</g-content>-->
-        <!--<g-footer>footer</g-footer>-->
-      <!--</g-layout>-->
-  <!--</g-layout>-->
+  <h1>布局</h1>
+  <g-layout style="height: 100%">
+      <g-slider>slider</g-slider>
+      <g-layout>
+        <g-header>header</g-header>
+        <g-content style="height: 300px; background-color: red" >content</g-content>
+        <g-footer>footer</g-footer>
+      </g-layout>
+  </g-layout>
 
 
   <!--<g-toast></g-toast>-->
@@ -153,30 +153,33 @@
   <!--<div class="box">-->
   <!--<g-input value="张四" @change="inputChange"></g-input>-->
   <!--</div>-->
-  <!--<div class="box">-->
-  <!--<p>双向绑定</p>-->
-  <!--<g-input v-model="message"></g-input>-->
-  <!--<br>-->
-  <!--<span>{{message}}</span>-->
-  <!--</div>-->
-  <!--<div class="box">-->
-  <!--<div style="margin-top: 20px;">-->
-  <!--<g-button :loading="loading" @click="loading = !loading">-->
-  <!--设置-->
-  <!--</g-button>-->
-  <!--<g-button icon="setting" :loading="loading1" @click="loading1 = !loading1">-->
-  <!--设置-->
-  <!--</g-button>-->
-  <!--<g-button icon="setting" icon-position="right" :loading="loading2" @click="loading2 = !loading2">-->
-  <!--设置-->
-  <!--</g-button>-->
-  <!--<g-button-group icon="left">-->
-  <!--<g-button icon="left">上一页</g-button>-->
-  <!--<g-button>更多</g-button>-->
-  <!--<g-button icon-position="right" icon="right">下一页</g-button>-->
-  <!--</g-button-group>-->
-  <!--</div>-->
-  <!--</div>-->
+
+
+
+  <div class="box">
+  <p>双向绑定</p>
+  <g-input v-model="message"></g-input>
+  <br>
+  <span>{{message}}</span>
+  </div>
+  <div class="box">
+  <div style="margin-top: 20px;">
+  <g-button :loading="loading" @click="loading = !loading">
+  设置
+  </g-button>
+  <g-button icon="setting" :loading="loading1" @click="loading1 = !loading1">
+  设置
+  </g-button>
+  <g-button icon="setting" icon-position="right" :loading="loading2" @click="loading2 = !loading2">
+  设置
+  </g-button>
+  <g-button-group icon="left">
+  <g-button icon="left">上一页</g-button>
+  <g-button>更多</g-button>
+  <g-button icon-position="right" icon="right">下一页</g-button>
+  </g-button-group>
+  </div>
+  </div>
 </div>
 <div id="test"></div>
 <script src="src/app.js"></script>

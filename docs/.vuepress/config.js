@@ -15,6 +15,7 @@ module.exports = {
         title:'组件',
         children:[
           '/components/button',
+          '/components/toast',
           '/components/tabs',
           '/components/layout',
           '/components/grid',

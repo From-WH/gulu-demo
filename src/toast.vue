@@ -111,6 +111,7 @@
     background: $toast-bg;
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, .5);
     left: 50%;
+    z-index: 30;
     .close {
       padding: 0 8px;
       flex-shrink: 0;
