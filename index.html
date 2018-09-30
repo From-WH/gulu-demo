@@ -142,17 +142,19 @@
   <!--<g-col span="4" offset="2">1</g-col>-->
   <!--<g-col span="16" offset="2">2</g-col>-->
   <!--</g-row>-->
-  <!--<div class="box" style="margin-bottom: 20px;">-->
-  <!--<g-input value="张三"></g-input>-->
-  <!--<g-input value="张三" disabled></g-input>-->
-  <!--<g-input value="张三" readonly></g-input>-->
-  <!--</div>-->
-  <!--<div class="box">-->
-  <!--<g-input value="张二" error="姓名不能小于两个字"></g-input>-->
-  <!--</div>-->
-  <!--<div class="box">-->
-  <!--<g-input value="张四" @change="inputChange"></g-input>-->
-  <!--</div>-->
+
+
+  <div class="box" style="margin-bottom: 20px;">
+  <g-input value="张三"></g-input>
+  <g-input value="张三" disabled></g-input>
+  <g-input value="张三" readonly></g-input>
+  </div>
+  <div class="box">
+  <g-input value="张二" error="姓名不能小于两个字"></g-input>
+  </div>
+  <div class="box">
+  <g-input value="张四" @change="inputChange"></g-input>
+  </div>
 
 
 
@@ -162,6 +164,8 @@
   <br>
   <span>{{message}}</span>
   </div>
+
+
   <div class="box">
   <div style="margin-top: 20px;">
   <g-button :loading="loading" @click="loading = !loading">
