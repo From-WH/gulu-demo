@@ -81,7 +81,6 @@
 </script>
 <style scoped lang="scss">
   .col {
-    border: 1px solid black;
     width: 50%;
     $class-prefix: col-;
     @for $n from 1 through 24 {

@@ -1,0 +1,42 @@
+
+.icon[data-v-b27258] {
+  width: 1em;
+  height: 1em;
+}
+
+.wrapper[data-v-f6a481] {
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+}
+.wrapper[data-v-f6a481] > :not(:last-child) {
+    margin-right: .5em;
+}
+.wrapper > input[data-v-f6a481] {
+    height: 32px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    padding: 0 8px;
+    font-size: inherit;
+}
+.wrapper > input[data-v-f6a481]:hover {
+      border-color: #666;
+}
+.wrapper > input[data-v-f6a481]:focus {
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+      outline: none;
+}
+.wrapper > input[disabled][data-v-f6a481], .wrapper > input[readonly][data-v-f6a481] {
+      border-color: #bbb;
+      color: #bbb;
+      cursor: not-allowed;
+}
+.wrapper.error > input[data-v-f6a481] {
+    border-color: #F1453D;
+}
+.wrapper .icon-error[data-v-f6a481] {
+    fill: #F1453D;
+}
+.wrapper .errorMessage[data-v-f6a481] {
+    color: #F1453D;
+}

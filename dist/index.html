@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>轱辘</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /*：root一般是指html 也可以写做你要使用的css元素名*/
+    /*:root {*/
+    /*--button-height: 32px;*/
+    /*--font-size: 14px;*/
+    /*--button-bg: white;*/
+    /*--button-active-bg: #eee;*/
+    /*--border-radius: 4px;*/
+    /*--color: #333;*/
+    /*--border-color: #999;*/
+    /*--border-color-hover: #666;*/
+    /*}*/
+
+    #app {
+
+    }
+
+    body {
+      font-size: var(--font-size);
+    }
+
+    .box {
+      margin-bottom: 20px;
+    }
+  </style>
+  <style>
+    .demo {
+      min-height: 100px;
+    }
+  </style>
+<link rel="stylesheet" href="/app.ee7b3703.css"></head>
+<body>
+<div id="app">
+  <!--<g-tabs selected.sync="selectedTab">-->
+  <!--<g-tabs-head>-->
+  <!--<template slot="actions">-->
+  <!--<button>设置</button>-->
+  <!--</template>-->
+  <!--<g-tabs-item name="women" disabled>-->
+  <!--美女-->
+  <!--</g-tabs-item>-->
+  <!--<g-tabs-item name="finance">-->
+  <!--财经-->
+  <!--</g-tabs-item>-->
+  <!--<g-tabs-item name="sports">-->
+  <!--体育-->
+  <!--</g-tabs-item>-->
+  <!--</g-tabs-head>-->
+  <!--<g-tabs-body>-->
+  <!--<g-tabs-pane name="women">-->
+  <!--美女信息-->
+  <!--</g-tabs-pane>-->
+  <!--<g-tabs-pane name="finance">-->
+  <!--财经信息-->
+  <!--</g-tabs-pane>-->
+  <!--<g-tabs-pane name="sports">-->
+  <!--体育信息-->
+  <!--</g-tabs-pane>-->
+  <!--</g-tabs-body>-->
+  <!--</g-tabs>-->
+
+
+  <!--toast组件测试-->
+  <!--<button @click="showToast1">top</button>-->
+  <!--<button @click="showToast2">middle</button>-->
+  <!--<button @click="showToast3">bottom</button>-->
+
+
+  <h1>布局</h1>
+  <g-layout style="height: 100%">
+    <g-slider>slider</g-slider>
+    <g-layout>
+      <g-header>header</g-header>
+      <g-content style="height: 300px; background-color: red">content</g-content>
+      <g-footer>footer</g-footer>
+    </g-layout>
+  </g-layout>
+
+
+  <!--<g-toast></g-toast>-->
+
+  <!---->
+
+  <g-row>
+    <g-col span="23" offset="1" :narrow-pc="{span:12,offset:12}">
+      <div class="demo"></div>
+    </g-col>
+  </g-row>
+  <g-row gutter="20">
+    <g-col span="2" :ipad="{span:8}" :narrow-pc="{span:4}" :pc="{span:2}" :wide-pc="{span:1}">
+      1
+    </g-col>
+    <g-col span="22" :ipad="{span:16}" :narrow-pc="{span:20}" :pc="{span:22}" :wide-pc="{span:23}">11
+    </g-col>
+  </g-row>
+  <g-row gutter="20">
+    <g-col>1</g-col>
+    <g-col>2</g-col>
+    <g-col>3</g-col>
+  </g-row>
+  <g-row gutter="20">
+    <g-col span="6">1</g-col>
+    <g-col span="4">2</g-col>
+    <g-col span="6">3</g-col>
+    <g-col span="8">4</g-col>
+  </g-row>
+  <g-row gutter="20">
+    <g-col span="2">1</g-col>
+    <g-col span="22">2</g-col>
+  </g-row>
+  <g-row gutter="20">
+    <g-col span="4">1</g-col>
+    <g-col span="20">2</g-col>
+  </g-row>
+  <g-row gutter="20">
+    <g-col span="6">1</g-col>
+    <g-col span="18" offset="2">2</g-col>
+  </g-row>
+  <g-row gutter="20">
+    <g-col span="4">1</g-col>
+    <g-col span="4" offset="2">1</g-col>
+    <g-col span="16" offset="2">2</g-col>
+  </g-row>
+
+
+  <!--<div class="box" style="margin-bottom: 20px;">-->
+  <!--<g-input value="张三"></g-input>-->
+  <!--<g-input value="张三" disabled></g-input>-->
+  <!--<g-input value="张三" readonly></g-input>-->
+  <!--</div>-->
+  <!--<div class="box">-->
+  <!--<g-input value="张二" error="姓名不能小于两个字"></g-input>-->
+  <!--</div>-->
+  <!--<div class="box">-->
+  <!--<g-input value="张四" @change="inputChange"></g-input>-->
+  <!--</div>-->
+
+
+  <!--<div class="box">-->
+  <!--<p>双向绑定</p>-->
+  <!--<g-input v-model="message"></g-input>-->
+  <!--<br>-->
+  <!--<span>{{message}}</span>-->
+  <!--</div>-->
+
+
+  <!--<div class="box">-->
+  <!--<div style="margin-top: 20px;">-->
+  <!--<g-button :loading="loading" @click="loading = !loading">-->
+  <!--设置-->
+  <!--</g-button>-->
+  <!--<g-button icon="setting" :loading="loading1" @click="loading1 = !loading1">-->
+  <!--设置-->
+  <!--</g-button>-->
+  <!--<g-button icon="setting" icon-position="right" :loading="loading2" @click="loading2 = !loading2">-->
+  <!--设置-->
+  <!--</g-button>-->
+  <!--<g-button-group icon="left">-->
+  <!--<g-button icon="left">上一页</g-button>-->
+  <!--<g-button>更多</g-button>-->
+  <!--<g-button icon-position="right" icon="right">下一页</g-button>-->
+  <!--</g-button-group>-->
+  <!--</div>-->
+  <!--</div>-->
+</div>
+<div id="test"></div>
+<script src="/app.ee7b3703.js"></script>
+</body>
+
+</html>

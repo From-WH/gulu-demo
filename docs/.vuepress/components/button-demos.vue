@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h3>预览:</h3>
     <g-button>默认按钮</g-button>
     <g-button icon="setting">带有icon</g-button>
     <g-button :loading="true">带有loading</g-button>

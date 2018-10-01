@@ -1,0 +1,55 @@
+
+.icon[data-v-b27258] {
+  width: 1em;
+  height: 1em;
+}
+
+@charset "UTF-8";
+@keyframes spin-data-v-464376 {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(100deg);
+}
+}
+.g-button[data-v-464376] {
+  font-size: 14px;
+  height: 32px;
+  padding: 0 1em;
+  border-radius: 4px;
+  border: 1px solid #999;
+  background: white;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  /*上下对不齐就用*/
+}
+.g-button[data-v-464376]:hover {
+    border-color: #666;
+}
+.g-button[data-v-464376]:active {
+    background-color: #eee;
+}
+.g-button[data-v-464376]:focus {
+    outline: none;
+}
+.g-button > .g-button-content[data-v-464376] {
+    order: 2;
+}
+.g-button > .icon[data-v-464376] {
+    order: 1;
+    margin-right: .1em;
+}
+.g-button.icon-right > .g-button-content[data-v-464376] {
+    order: 1;
+}
+.g-button.icon-right > .icon[data-v-464376] {
+    order: 2;
+    margin-left: .1em;
+    margin-right: 0;
+}
+.g-button .loading[data-v-464376] {
+    animation: spin-data-v-464376 2s infinite linear;
+}
