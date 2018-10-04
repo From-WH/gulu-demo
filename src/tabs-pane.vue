@@ -36,7 +36,7 @@
 </script>
 <style lang="scss" scoped>
   .tabs-pane {
-    padding: 2em;
+    padding: 2em 0;
     &.active {
     }
   }

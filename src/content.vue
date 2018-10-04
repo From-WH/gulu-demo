@@ -1,14 +1,13 @@
 <template>
-  <div class="content">
+  <div class="content-style">
     <slot></slot>
   </div>
 </template>
 
 <style lang="scss" scoped>
-  .content {
+  .content-style {
     background-color: #00BFFF;
     flex-grow: 1;
     width: 100%;
-    padding: 0;
   }
 </style>
