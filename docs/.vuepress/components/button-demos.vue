@@ -4,7 +4,7 @@
     <g-button>默认按钮</g-button>
     <g-button icon="setting">带有icon</g-button>
     <g-button :loading="true">带有loading</g-button>
-    <g-button disabled>不可点击</g-button>
+    <g-button disabled class="disabled">不可点击</g-button>
     <br>
     <br>
     <g-button-group icon="left">
@@ -45,3 +45,8 @@
     }
   }
 </script>
+<style>
+  .disabled {
+    cursor: not-allowed;
+  }
+</style>

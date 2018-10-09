@@ -1,9 +1,11 @@
 # gulu 一个VUE UI组件
-[![Build Status](https://travis-ci.org/From-WH/gulu-demo.svg?branch=master)](https://travis-ci.org/From-WH/gulu-demo)
+
+![TeamCity CodeBetter](https://img.shields.io/teamcity/codebetter/bt428.svg)    ![node (scoped)](https://img.shields.io/node/v/@stdlib/stdlib.svg)
+
 ### 作者：From
 
 ## 介绍
-这是我在学习Vue过程中制作的一个UI框架，希望对你有用。
+这是我在学习Vue过程中制作的一个UI框架，提供了button、grid、input、layout、toast、tabs等常用组件，适合移动端和 PC 端使用。。
 
 ## 开始
     1.安装

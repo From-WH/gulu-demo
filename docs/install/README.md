@@ -1,7 +1,15 @@
 # 安装
 
 # gulu 一个VUE UI组件
-[![Build Status](https://travis-ci.org/From-WH/gulu-demo.svg?branch=master)](https://travis-ci.org/From-WH/gulu-demo)
+
+
+
+![TeamCity CodeBetter](https://img.shields.io/teamcity/codebetter/bt428.svg)    ![node (scoped)](https://img.shields.io/node/v/@stdlib/stdlib.svg)
+
+
+
+
+
 ### 作者：From
 
 ## 介绍

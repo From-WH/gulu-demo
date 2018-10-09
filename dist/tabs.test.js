@@ -10151,7 +10151,7 @@ exports.default = {
           left = _vm$$el$getBoundingCl.left;
 
       _this.$refs.line.style.width = width + 'px';
-      _this.$refs.line.style.left = left - 550 + 'px';
+      _this.$refs.line.style.left = left - 590 + 'px';
     });
   }
 };

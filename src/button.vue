@@ -50,7 +50,6 @@
     }
   }
   .g-button {
-
     font-size: $font-size;
     height: $button-height;
     padding: 0 1em;
@@ -91,6 +90,7 @@
     .loading {
       animation: spin 2s infinite linear;
     }
+
   }
 
 </style>
