@@ -30,7 +30,7 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 400px;
     overflow: hidden;
     &.hasSlider {
       flex-direction: row;

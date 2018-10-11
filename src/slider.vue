@@ -16,11 +16,8 @@
     },
     methods:{
       close(){
-        this.visible = false
+        this.visible = !this.visible
       },
-      open(){
-        this.visible = true
-      }
     }
   }
 </script>
@@ -50,6 +47,7 @@
 
   .slide-slide-enter, .slide-slide-leave-to {
     margin-left: -100px;
-    transition: all 0.6s;
+    transition: all 0.9s;
+    opacity: 0;
   }
 </style>
