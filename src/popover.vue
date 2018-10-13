@@ -1,5 +1,5 @@
 <template>
-  <div class="popover" @click="onClick">
+  <div class="popover" @click="onClick" ref="popover">
     <div ref="contentWrapper" class="content-wrapper" v-if="visible">
       <slot name="content"></slot>
     </div>
@@ -15,37 +15,39 @@
     data() {
       return {visible: false}
     },
-    mounted() {
-
-    },
     methods: {
+      positionContent() {
+        document.body.appendChild(this.$refs.contentWrapper)
+        let {top, left} = this.$refs.triggerWrapper.getBoundingClientRect()
+        this.$refs.contentWrapper.style.left = left + window.scrollX + 'px'
+        this.$refs.contentWrapper.style.top = top + window.scrollY + 'px'
+      },
+      eventHandler(e) {
+        if (this.$refs.popover && ( this.$refs.popover === e.target || this.$refs.popover.contains(e.target))) {
+          return;
+        }
+        this.close()
+      },
+      open() {
+        this.visible = true
+        this.$nextTick(() => {
+          this.positionContent()
+          document.addEventListener('click', this.eventHandler)
+        })
+      },
+      close(){
+        this.visible = false
+        document.removeEventListener('click', this.eventHandler)
+      },
       onClick(event) {
         if (this.$refs.triggerWrapper.contains(event.target)) {
-          this.visible = !this.visible
           if (this.visible === true) {
-            this.$nextTick(() => {
-              document.body.appendChild(this.$refs.contentWrapper)
-              let {top, left} = this.$refs.triggerWrapper.getBoundingClientRect()
-              this.$refs.contentWrapper.style.left = left + window.scrollX + 'px'
-              this.$refs.contentWrapper.style.top = top + window.scrollY + 'px'
-              let eventHandler = (e) => {
-                if (this.$refs.contentWrapper.contains(e.target)) {
+            this.close()
+          }else {
+            this.open()
 
-                }else {
-                  this.visible = false
-                  document.removeEventListener('click', eventHandler)
-                }
-
-              }
-              document.addEventListener('click', eventHandler)
-            })
           }
-        } else {
-          console.log(点击的是下面);
         }
-        // this.visible = !this.visible
-        //
-        //
       }
     }
   }
