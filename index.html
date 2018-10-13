@@ -9,19 +9,35 @@
   </style>
 </head>
 <body>
-<div id="app" style="padding: 100px 40px;    border: 1px solid black; ">
-  <g-popover>
+<div id="app" style="padding: 200px 200px;">
+  <g-popover position="left">
     <template slot="content">
-      <div>我是内容</div>
+      <div>我是左边内容</div>
     </template>
-      <button>点我</button>
+    <g-button>左边弹出</g-button>
   </g-popover>
-  <g-popover>
+
+  <g-popover position="bottom">
     <template slot="content">
-      <div>我是内容</div>
+      <div>我是下部内容</div>
     </template>
-    <button>点我</button>
+      <g-button>下边弹出</g-button>
   </g-popover>
+
+  <g-popover position="top">
+    <template slot="content">
+      <div>我是上部内容</div>
+    </template>
+    <g-button>上面弹出</g-button>
+  </g-popover>
+
+  <g-popover position="right">
+    <template slot="content">
+      <div>我是右边内容</div>
+    </template>
+    <g-button>右边弹出</g-button>
+  </g-popover>
+
   <!--<g-tabs selected.sync="selectedTab">-->
   <!--<g-tabs-head>-->
   <!--<template slot="actions">-->
