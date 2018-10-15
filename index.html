@@ -10,33 +10,68 @@
 </head>
 <body>
 <div id="app" style="padding: 200px 200px;">
-  <g-popover position="left">
+
+
+  <div>
+    <g-popover position="left">
+      <template slot="content">
+        <div>我是左边内容</div>
+      </template>
+      <g-button>点击左边弹出</g-button>
+    </g-popover>
+
+    <g-popover position="bottom">
+      <template slot="content">
+        <div>我是下部内容，而且我的内容较多内容较多内容较多内容较多内容较多内容较多内容较多内容较多内容较多内容较多内容较多内容较多</div>
+      </template>
+      <g-button>点击下边弹出</g-button>
+    </g-popover>
+
+    <g-popover position="top">
+      <template slot="content">
+        <div>我是上部内容</div>
+      </template>
+      <g-button>点击上边弹出</g-button>
+    </g-popover>
+
+    <g-popover position="right">
+      <template slot="content">
+        <div>我是右边内容</div>
+      </template>
+      <g-button>点击右边弹出</g-button>
+    </g-popover>
+  </div>
+<br>
+<div style="padding-top: 40px">
+  <g-popover position="left" trigger="hover">
     <template slot="content">
       <div>我是左边内容</div>
     </template>
-    <g-button>左边弹出</g-button>
+    <g-button>hover左边弹出</g-button>
   </g-popover>
 
-  <g-popover position="bottom">
+  <g-popover position="bottom" trigger="hover">
     <template slot="content">
       <div>我是下部内容，而且我的内容较多内容较多内容较多内容较多内容较多内容较多内容较多内容较多内容较多内容较多内容较多内容较多</div>
     </template>
-      <g-button>下边弹出</g-button>
+    <g-button>hover下边弹出</g-button>
   </g-popover>
 
-  <g-popover position="top">
+  <g-popover position="top" trigger="hover">
     <template slot="content">
       <div>我是上部内容</div>
     </template>
-    <g-button>上边弹出</g-button>
+    <g-button>hover上边弹出</g-button>
   </g-popover>
 
-  <g-popover position="right">
+  <g-popover position="right" trigger="hover">
     <template slot="content">
       <div>我是右边内容</div>
     </template>
-    <g-button>右边弹出</g-button>
+    <g-button>hover右边弹出</g-button>
   </g-popover>
+</div>
+
 
   <!--<g-tabs selected.sync="selectedTab">-->
   <!--<g-tabs-head>-->

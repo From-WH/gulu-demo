@@ -1,5 +1,5 @@
 <template>
-  <div class="popover" @click="onClick" ref="popover">
+  <div class="popover" ref="popover">
     <div ref="contentWrapper" class="content-wrapper" v-if="visible" :class="{[`position-${position}`]:true}">
       <slot name="content"></slot>
     </div>
@@ -19,10 +19,42 @@
         validate(value) {
           return ['top', 'right', 'bottom', 'left'].indexOf(value) >= 0
         }
+      },
+      trigger:{
+        type:String,
+        default:'click',
+        validate(value){
+          return ['click','hover'].indexOf()(value)>=0
+        }
       }
     },
     data() {
       return {visible: false}
+    },
+    computed:{
+      openEvent(){
+        if(this.trigger === 'click'){
+          return 'click'
+        }else{
+          return 'mouseenter'
+        }
+      },
+      closeEvent(){
+        if(this.trigger === 'click'){
+          return 'click'
+        }else{
+          return 'mouseleave'
+        }
+      },
+
+    },
+    mounted(){
+      if(this.trigger === 'click'){
+        this.$refs.popover.addEventListener('click',this.onClick)
+      }else{
+        this.$refs.popover.addEventListener('mouseenter',this.open)
+        this.$refs.popover.addEventListener('mouseleave',this.close)
+      }
     },
     methods: {
       positionContent() {
@@ -95,6 +127,7 @@
     display: inline-block;
     vertical-align: top;
     position: relative;
+    z-index: 1;
   }
   .content-wrapper {
     position: absolute;
