@@ -3,7 +3,7 @@
     <div ref="contentWrapper" class="content-wrapper" v-if="visible" :class="{[`position-${position}`]:true}">
       <slot name="content"></slot>
     </div>
-    <span ref="triggerWrapper" style="display:inline-block;">
+    <span class="button-style" ref="triggerWrapper" style="display:inline-block;">
     <slot></slot>
     </span>
   </div>
@@ -49,7 +49,7 @@
             top:top + window.scrollY +(height- height2)/2,
           }
         }
-        contentWrapper.style.top = positions[this.position].top + 'px'
+        contentWrapper.style.top = positions[this.position].top + 'px';
         contentWrapper.style.left = positions[this.position].left + 'px'
       },
       eventHandler(e) {
@@ -89,21 +89,22 @@
 </script>
 
 <style lang="scss" scoped>
-  $border-color: black;
+  $border-color: #ebeef5;
   $border-radius: 4px;
   .popover {
     display: inline-block;
     vertical-align: top;
     position: relative;
   }
-
   .content-wrapper {
     position: absolute;
     border: 1px solid $border-color;
     border-radius: $border-radius;
     padding: .5em 1em;
     background: white;
-    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.5));
+    font-size: 14px;
+    color: #606266;
+    filter: drop-shadow(0 2px 2px  rgba(0,0,0,.1));
     max-width: 20em;
     word-break: break-all;
     &.position-top {
@@ -115,7 +116,7 @@
         top: 100%;
         left: 10px;
         border: 10px solid transparent;
-        border-top-color: black;
+        border-top-color: $border-color;
       }
       &::after {
         content: '';
@@ -134,7 +135,7 @@
         bottom: 100%;
         left: 10px;
         border: 10px solid transparent;
-        border-bottom-color: black;
+        border-bottom-color: $border-color;
       }
       &::after {
         content: '';
@@ -155,7 +156,7 @@
         top: 50%;
         transform: translateY(-50%);
         border: 10px solid transparent;
-        border-left-color: black;
+        border-left-color: $border-color;
       }
       &::after {
         content: '';
@@ -176,7 +177,7 @@
         top: 50%;
         transform: translateY(-50%);
         border: 10px solid transparent;
-        border-right-color: black;
+        border-right-color: $border-color;
       }
       &::after {
         content: '';

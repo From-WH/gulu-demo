@@ -37,10 +37,12 @@
   $font-size:14px;
   $button-height:32px;
   $border-radius:4px;
-  $border-color:#999;
+  $border-color:rgb(220,223,230);
+  $border-hover-color:rgb(198,226,255);
   $button-bg:white;
-  $border-color-hover:#666;
-  $button-active-bg:#eee;
+  $bg-color-hover:rgb(236,245,255);
+  $border-active-color:rgb(58,142,230);
+  $color-hover:rgb(64,159,255);
   @keyframes spin {
     0% {
       transform: rotate(0deg);
@@ -60,11 +62,17 @@
     justify-content: center;
     align-items: center;
     vertical-align: middle; /*上下对不齐就用*/
+    cursor: pointer;
     &:hover {
-      border-color: $border-color-hover;
+      border-color: $border-hover-color;
+      background-color: $bg-color-hover;
+      color: $color-hover;
+      fill: rgb(64,159,255);
     }
+
+
     &:active {
-      background-color: $button-active-bg;
+      border-color: $border-active-color;
     }
     &:focus {
       outline: none;
@@ -91,6 +99,14 @@
       animation: spin 2s infinite linear;
     }
 
+  }
+  button:disabled {
+    pointer-events: none;
+    cursor: none;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: .65;
   }
 
 </style>
