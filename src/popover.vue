@@ -1,7 +1,7 @@
 <template>
   <div class="popover" ref="popover">
     <div ref="contentWrapper" class="content-wrapper" v-if="visible" :class="{[`position-${position}`]:true}">
-      <slot name="content"></slot>
+      <slot name="content" :close="close"></slot>
     </div>
     <span class="button-style" ref="triggerWrapper" style="display:inline-block;">
     <slot></slot>
@@ -20,65 +20,65 @@
           return ['top', 'right', 'bottom', 'left'].indexOf(value) >= 0
         }
       },
-      trigger:{
-        type:String,
-        default:'click',
-        validate(value){
-          return ['click','hover'].indexOf()(value)>=0
+      trigger: {
+        type: String,
+        default: 'click',
+        validate(value) {
+          return ['click', 'hover'].indexOf()(value) >= 0
         }
       }
     },
     data() {
       return {visible: false}
     },
-    computed:{
-      openEvent(){
-        if(this.trigger === 'click'){
+    computed: {
+      openEvent() {
+        if (this.trigger === 'click') {
           return 'click'
-        }else{
+        } else {
           return 'mouseenter'
         }
       },
-      closeEvent(){
-        if(this.trigger === 'click'){
+      closeEvent() {
+        if (this.trigger === 'click') {
           return 'click'
-        }else{
+        } else {
           return 'mouseleave'
         }
       },
 
     },
-    mounted(){
-      if(this.trigger === 'click'){
-        this.$refs.popover.addEventListener('click',this.onClick)
-      }else{
-        this.$refs.popover.addEventListener('mouseenter',this.open)
-        this.$refs.popover.addEventListener('mouseleave',this.close)
+    mounted() {
+      if (this.trigger === 'click') {
+        this.$refs.popover.addEventListener('click', this.onClick)
+      } else {
+        this.$refs.popover.addEventListener('mouseenter', this.open)
+        this.$refs.popover.addEventListener('mouseleave', this.close)
       }
     },
     methods: {
       positionContent() {
         document.body.appendChild(this.$refs.contentWrapper);
-        let {contentWrapper,triggerWrapper} = this.$refs
-        let {top, left, height,width} = triggerWrapper.getBoundingClientRect();
-        let {height:height2} = contentWrapper.getBoundingClientRect();
-        let {right:right2} = contentWrapper.getBoundingClientRect();
+        let {contentWrapper, triggerWrapper} = this.$refs
+        let {top, left, height, width} = triggerWrapper.getBoundingClientRect();
+        let {height: height2} = contentWrapper.getBoundingClientRect();
+        let {right: right2} = contentWrapper.getBoundingClientRect();
         let positions = {
-          top:{
-            top:top + window.scrollY,
-            left:left + window.scrollX,
+          top: {
+            top: top + window.scrollY,
+            left: left + window.scrollX,
           },
-          bottom:{
-            top:top + height + window.scrollY,
-            left:left + window.scrollX,
+          bottom: {
+            top: top + height + window.scrollY,
+            left: left + window.scrollX,
           },
-          left:{
-            top:top + window.scrollY +(height- height2)/2,
-            left:left + window.scrollX,
+          left: {
+            top: top + window.scrollY + (height - height2) / 2,
+            left: left + window.scrollX,
           },
-          right:{
-            left:left + window.scrollX + width,
-            top:top + window.scrollY +(height- height2)/2,
+          right: {
+            left: left + window.scrollX + width,
+            top: top + window.scrollY + (height - height2) / 2,
           }
         }
         contentWrapper.style.top = positions[this.position].top + 'px';
@@ -129,6 +129,7 @@
     position: relative;
     z-index: 1;
   }
+
   .content-wrapper {
     position: absolute;
     border: 1px solid $border-color;
@@ -137,9 +138,10 @@
     background: white;
     font-size: 14px;
     color: #606266;
-    filter: drop-shadow(0 2px 2px  rgba(0,0,0,.1));
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, .1));
     max-width: 20em;
     word-break: break-all;
+    z-index: 1;
     &.position-top {
       transform: translateY(-100%);
       margin-top: -10px;
@@ -150,6 +152,7 @@
         left: 10px;
         border: 10px solid transparent;
         border-top-color: $border-color;
+        border-bottom:none;
       }
       &::after {
         content: '';
@@ -169,6 +172,7 @@
         left: 10px;
         border: 10px solid transparent;
         border-bottom-color: $border-color;
+        border-top:none;
       }
       &::after {
         content: '';
@@ -190,6 +194,7 @@
         transform: translateY(-50%);
         border: 10px solid transparent;
         border-left-color: $border-color;
+        border-right:none;
       }
       &::after {
         content: '';
@@ -211,6 +216,7 @@
         transform: translateY(-50%);
         border: 10px solid transparent;
         border-right-color: $border-color;
+        border-left:none;
       }
       &::after {
         content: '';

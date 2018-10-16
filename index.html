@@ -14,8 +14,8 @@
 
   <div>
     <g-popover position="left">
-      <template slot="content">
-        <div>我是左边内容</div>
+      <template slot="content" slot-scope="{close}">
+        <div>我是左边内容<g-button @click="close">关闭</g-button></div>
       </template>
       <g-button>点击左边弹出</g-button>
     </g-popover>
@@ -108,15 +108,15 @@
   <!--<button @click="showToast3">bottom</button>-->
 
 
-  <!--<h1>布局</h1>-->
-  <!--<g-layout style="height: 100%">-->
-    <!--<g-slider>slider</g-slider>-->
-    <!--<g-layout>-->
-      <!--<g-header>header</g-header>-->
-      <!--<g-content style="height: 300px; background-color: red">content</g-content>-->
-      <!--<g-footer>footer</g-footer>-->
-    <!--</g-layout>-->
-  <!--</g-layout>-->
+  <h1>布局</h1>
+  <g-layout style="height: 100%">
+    <g-slider>slider</g-slider>
+    <g-layout>
+      <g-header>header</g-header>
+      <g-content style="height: 300px; background-color: red">content</g-content>
+      <g-footer>footer</g-footer>
+    </g-layout>
+  </g-layout>
 
 
   <!--<g-toast></g-toast>-->

@@ -35,9 +35,6 @@
         border-bottom-right-radius: $border-radius;
         border-top-right-radius: $border-radius;
       }
-      &:hover {
-        z-index: 1;
-      }
     }
   }
 </style>
