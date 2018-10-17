@@ -14,7 +14,6 @@
         },
       }
     },
-
     mounted() {
       this.$children.forEach((vm) => {
         if (vm.$options.name === 'GuluSlider') {

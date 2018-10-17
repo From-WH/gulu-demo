@@ -7,6 +7,7 @@
   </transition>
 </template>
 <script>
+  import Bus from './bus'
   export default {
     name: 'GuluSlider',
     data() {
@@ -16,8 +17,16 @@
     },
     methods:{
       close(){
-        this.visible = !this.visible
+        this.visible = false
       },
+      open(){
+        this.visible = true
+      }
+    },
+    mounted(){
+      Bus.$on('openSlider',()=>{
+        this.open()
+      })
     }
   }
 </script>

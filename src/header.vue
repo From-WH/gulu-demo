@@ -1,18 +1,20 @@
 <template>
   <div class="header">
     <slot></slot>
+    <button @click="openClick">打开</button>
   </div>
 </template>
 <script>
+  import Bus from './bus'
   export default {
     name: 'GuluHeader',
     data() {
       return {}
     },
     methods:{
-      // open(){
-      //   this.$on('visiable')
-      // }
+      openClick(){
+        Bus.$emit('openSlider')
+      }
     }
   }
 </script>
