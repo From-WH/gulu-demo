@@ -107,6 +107,7 @@
     -webkit-box-shadow: none;
     box-shadow: none;
     opacity: .65;
+    user-select: none;
   }
 
 </style>
