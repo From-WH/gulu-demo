@@ -8,6 +8,7 @@
 </template>
 <script>
   import Bus from './bus'
+
   export default {
     name: 'GuluSlider',
     data() {
@@ -15,16 +16,16 @@
         visible: true,
       }
     },
-    methods:{
-      close(){
+    methods: {
+      close() {
         this.visible = false
       },
-      open(){
+      open() {
         this.visible = true
       }
     },
-    mounted(){
-      Bus.$on('openSlider',()=>{
+    mounted() {
+      Bus.$on('openSlider', () => {
         this.open()
       })
     }
@@ -40,16 +41,18 @@
   .hasSlider {
     flex-direction: row;
   }
+
   .button {
     color: white;
     border: none;
     padding: 3px;
     border-radius: 2px;
-    background-color: #6196cc ;
+    background-color: #6196cc;
     position: absolute;
     top: 0;
     right: 0;
   }
+
   .slide-slide-leave-active {
     transition: transform;
   }

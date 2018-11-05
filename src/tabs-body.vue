@@ -7,9 +7,9 @@
 
 <script>
   export default {
-    name:'GuluTabsBody',
-    inject:['eventBus'],
-    mounted(){
+    name: 'GuluTabsBody',
+    inject: ['eventBus'],
+    mounted() {
 
     }
   }

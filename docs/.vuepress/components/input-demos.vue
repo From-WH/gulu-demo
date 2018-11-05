@@ -5,9 +5,6 @@
       <g-input value="张三" disabled></g-input>
       <g-input value="张三" readonly></g-input>
     </div>
-    <div class="box">
-      <g-input value="张二" error="姓名不能小于两个字"></g-input>
-    </div>
     <br>
 
     <div class="box">
@@ -42,10 +39,6 @@
   <g-input value="张三" disabled></g-input>
   <g-input value="张三" readonly></g-input>
 </div>
-<div>
-  <g-input value="张二" error="姓名不能小于两个字"></g-input>
-</div>
-
 <div>
   <h3>双向绑定</h3>
   <g-input v-model="value"></g-input>
