@@ -18,19 +18,23 @@
   height: 32px;
   padding: 0 1em;
   border-radius: 4px;
-  border: 1px solid #999;
+  border: 1px solid #dcdfe6;
   background: white;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   vertical-align: middle;
   /*上下对不齐就用*/
+  cursor: pointer;
 }
 .g-button[data-v-464376]:hover {
-    border-color: #666;
+    border-color: #c6e2ff;
+    background-color: #ecf5ff;
+    color: #409fff;
+    fill: #409fff;
 }
 .g-button[data-v-464376]:active {
-    background-color: #eee;
+    border-color: #3a8ee6;
 }
 .g-button[data-v-464376]:focus {
     outline: none;
@@ -52,4 +56,13 @@
 }
 .g-button .loading[data-v-464376] {
     animation: spin-data-v-464376 2s infinite linear;
+}
+button[data-v-464376]:disabled {
+  pointer-events: none;
+  cursor: none;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  opacity: .65;
+  user-select: none;
 }

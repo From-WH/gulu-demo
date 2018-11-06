@@ -16,7 +16,6 @@
       <change beforePath="$PROJECT_DIR$/dist/tabs.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/tabs.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/tabs.test.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/tabs.test.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/toast.test.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/toast.test.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/components/input-demos.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/components/input-demos.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/css/0.styles.a8203d22.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/assets/css/3.styles.fcfdaa9f.css" beforeDir="false" />
@@ -57,8 +56,6 @@
       <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/install/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/install/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist/install/windows.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist/install/windows.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/slider.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/slider.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tabs-body.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/tabs-body.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -75,7 +72,7 @@
     <session id="-503864902">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="71" />
+          <entry key="project.closed" value="73" />
           <entry key="project.open.time.10" value="3" />
           <entry key="project.open.time.11" value="13" />
           <entry key="project.open.time.12" value="12" />
@@ -83,7 +80,7 @@
           <entry key="project.open.time.14" value="9" />
           <entry key="project.open.time.15" value="7" />
           <entry key="project.open.time.16" value="4" />
-          <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.17" value="2" />
           <entry key="project.open.time.18" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.20" value="1" />
@@ -94,7 +91,7 @@
           <entry key="project.open.time.7" value="3" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="81" />
+          <entry key="project.opened" value="82" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -107,7 +104,7 @@
           <entry key="json" value="15" />
           <entry key="md" value="36" />
           <entry key="sh" value="6" />
-          <entry key="vue" value="175" />
+          <entry key="vue" value="176" />
           <entry key="yml" value="2" />
         </counts>
       </usages-collector>
@@ -119,7 +116,7 @@
           <entry key="JavaScript" value="67" />
           <entry key="Markdown" value="35" />
           <entry key="PLAIN_TEXT" value="13" />
-          <entry key="Vue.js" value="175" />
+          <entry key="Vue.js" value="176" />
           <entry key="YAML" value="2" />
         </counts>
       </usages-collector>
@@ -129,7 +126,7 @@
           <entry key="JSON" value="69" />
           <entry key="JavaScript" value="6406" />
           <entry key="Markdown" value="1111" />
-          <entry key="PLAIN_TEXT" value="1889" />
+          <entry key="PLAIN_TEXT" value="1891" />
           <entry key="Vue.js" value="16748" />
         </counts>
       </usages-collector>
@@ -142,7 +139,7 @@
           <entry key="json" value="69" />
           <entry key="md" value="1172" />
           <entry key="sh" value="26" />
-          <entry key="txt" value="1784" />
+          <entry key="txt" value="1786" />
           <entry key="vue" value="16784" />
         </counts>
       </usages-collector>
@@ -152,18 +149,9 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/slider.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-570">
+            <state relative-caret-position="57">
               <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
             </state>
           </provider>
@@ -189,9 +177,7 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package-lock.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-171" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -224,17 +210,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tabs-pane.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
+            <state relative-caret-position="190">
               <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/toast.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="44" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="44" />
+            <state relative-caret-position="570">
+              <caret line="30" column="20" lean-forward="true" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/tabs.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="30" column="14" lean-forward="true" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -532,7 +527,8 @@
       <workItem from="1540890239523" duration="608000" />
       <workItem from="1540982459108" duration="15000" />
       <workItem from="1541383508927" duration="788000" />
-      <workItem from="1541429825984" duration="1031000" />
+      <workItem from="1541429825984" duration="1089000" />
+      <workItem from="1541495632181" duration="1176000" />
     </task>
     <task id="LOCAL-00041" summary="添加toast和plugin">
       <created>1536902882831</created>
@@ -881,7 +877,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="380452000" />
+    <option name="totallyTimeSpent" value="381686000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -894,6 +890,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="npm" order="1" sideWeight="0.5006993" side_tool="true" weight="0.19418758" />
@@ -913,7 +910,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" content_ui="combo" id="Project" order="3" sideWeight="0.4993007" visible="true" weight="0.14879356" />
+      <window_info active="true" anchor="right" content_ui="combo" id="Project" order="3" sideWeight="0.4993007" visible="true" weight="0.1508043" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -962,7 +959,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="添加button group例子及填充介绍 md" />
     <MESSAGE value="官网input 组件展示完成" />
     <MESSAGE value="更新input代码展示内容" />
     <MESSAGE value="tabs bug 修复完成？" />
@@ -987,7 +983,8 @@
     <MESSAGE value="官网添加popover组件" />
     <MESSAGE value="修复hover闪烁bug" />
     <MESSAGE value="popover组件布置到官网" />
-    <option name="LAST_COMMIT_MESSAGE" value="popover组件布置到官网" />
+    <MESSAGE value="优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1163,13 +1160,6 @@
     <entry file="file://$PROJECT_DIR$/test/tabs-pane.test.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tabs.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/header.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
@@ -1298,9 +1288,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="627">
           <caret line="94" column="9" selection-start-line="94" selection-start-column="9" selection-end-line="94" selection-end-column="9" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1315,18 +1302,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="15" selection-start-line="15" selection-end-line="72" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#g-layout#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#g-content#0;n#g-layout#0;n#g-layout#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/slider.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-570">
+        <state relative-caret-position="57">
           <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
         </state>
       </provider>
@@ -1346,16 +1334,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-171" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/slider.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tabs-body.vue">
       <provider selected="true" editor-type-id="text-editor">
@@ -1380,15 +1359,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tabs-pane.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
+        <state relative-caret-position="190">
           <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/toast.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="44" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="44" />
+        <state relative-caret-position="570">
+          <caret line="30" column="20" lean-forward="true" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tabs.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="30" column="14" lean-forward="true" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
         </state>
       </provider>
     </entry>

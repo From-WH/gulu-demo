@@ -10038,21 +10038,30 @@ exports.default = {
       eventBus: this.eventBus
     };
   },
-  mounted: function mounted() {
-    var _this = this;
 
-    if (this.$children.length === 0) {
-      console && console.warn && console.warn('tabs的子组件应该是tabs-head和tabs-pane，但你没写子组件');
-    }
-    this.$children.forEach(function (vm) {
-      if (vm.$options.name = 'GuluTabsHead') {
-        vm.$children.forEach(function (childVm) {
-          if (childVm.$options.name === 'GuluTabsItem' && childVm.name === _this.selected) {
-            _this.eventBus.$emit('update:selected', _this.selected, childVm);
-          }
-        });
+  methods: {
+    checkChildren: function checkChildren() {
+      if (this.$children.length === 0) {
+        console && console.warn && console.warn('tabs的子组件应该是tabs-head和tabs-pane，但你没写子组件');
       }
-    });
+    },
+    selectTab: function selectTab() {
+      var _this = this;
+
+      this.$children.forEach(function (vm) {
+        if (vm.$options.name = 'GuluTabsHead') {
+          vm.$children.forEach(function (childVm) {
+            if (childVm.$options.name === 'GuluTabsItem' && childVm.name === _this.selected) {
+              _this.eventBus.$emit('update:selected', _this.selected, childVm);
+            }
+          });
+        }
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.checkChildren();
+    this.selectTab();
   }
 }; //
 //

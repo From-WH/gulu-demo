@@ -11129,7 +11129,7 @@ render._withStripped = true
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "content" }, [_vm._t("default")], 2)
+  return _c("div", { staticClass: "content-style" }, [_vm._t("default")], 2)
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -11164,17 +11164,34 @@ render._withStripped = true
       
       }
     })();
-},{"_css_loader":"node_modules\\_parcel-bundler@1.9.7@parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.common.js"}],"src\\header.vue":[function(require,module,exports) {
+},{"_css_loader":"node_modules\\_parcel-bundler@1.9.7@parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.common.js"}],"src\\bus.js":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-//
-//
-//
-//
-//
+
+var _vue = require('vue');
+
+var _vue2 = _interopRequireDefault(_vue);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Bus = new _vue2.default();
+
+exports.default = Bus;
+},{"vue":"node_modules\\vue\\dist\\vue.common.js"}],"src\\header.vue":[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _bus = require('./bus');
+
+var _bus2 = _interopRequireDefault(_bus);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
   name: 'GuluHeader',
@@ -11183,11 +11200,16 @@ exports.default = {
   },
 
   methods: {
-    // open(){
-    //   this.$on('visiable')
-    // }
+    openClick: function openClick() {
+      _bus2.default.$emit('openSlider');
+    }
   }
-};
+}; //
+//
+//
+//
+//
+//
         var $ea8b62 = exports.default || module.exports;
       
       if (typeof $ea8b62 === 'function') {
@@ -11200,7 +11222,18 @@ exports.default = {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "header" }, [_vm._t("default")], 2)
+  return _c(
+    "div",
+    { staticClass: "header" },
+    [
+      _vm._t("default"),
+      _vm._v(" "),
+      _c("button", { staticClass: "button", on: { click: _vm.openClick } }, [
+        _vm._v("打开")
+      ])
+    ],
+    2
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -11235,7 +11268,7 @@ render._withStripped = true
       
       }
     })();
-},{"_css_loader":"node_modules\\_parcel-bundler@1.9.7@parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.common.js"}],"src\\footer.vue":[function(require,module,exports) {
+},{"./bus":"src\\bus.js","_css_loader":"node_modules\\_parcel-bundler@1.9.7@parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.common.js"}],"src\\footer.vue":[function(require,module,exports) {
 
         var $88ec26 = exports.default || module.exports;
       
@@ -11290,14 +11323,12 @@ render._withStripped = true
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-//
-//
-//
-//
-//
-//
-//
-//
+
+var _bus = require('./bus');
+
+var _bus2 = _interopRequireDefault(_bus);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
   name: 'GuluSlider',
@@ -11314,8 +11345,22 @@ exports.default = {
     open: function open() {
       this.visible = true;
     }
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    _bus2.default.$on('openSlider', function () {
+      _this.open();
+    });
   }
-};
+}; //
+//
+//
+//
+//
+//
+//
+//
         var $efcc05 = exports.default || module.exports;
       
       if (typeof $efcc05 === 'function') {
@@ -11378,7 +11423,7 @@ render._withStripped = true
       
       }
     })();
-},{"_css_loader":"node_modules\\_parcel-bundler@1.9.7@parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.common.js"}],"src\\toast.vue":[function(require,module,exports) {
+},{"./bus":"src\\bus.js","_css_loader":"node_modules\\_parcel-bundler@1.9.7@parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.common.js"}],"src\\toast.vue":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11636,21 +11681,30 @@ exports.default = {
       eventBus: this.eventBus
     };
   },
-  mounted: function mounted() {
-    var _this = this;
 
-    if (this.$children.length === 0) {
-      console && console.warn && console.warn('tabs的子组件应该是tabs-head和tabs-pane，但你没写子组件');
-    }
-    this.$children.forEach(function (vm) {
-      if (vm.$options.name = 'GuluTabsHead') {
-        vm.$children.forEach(function (childVm) {
-          if (childVm.$options.name === 'GuluTabsItem' && childVm.name === _this.selected) {
-            _this.eventBus.$emit('update:selected', _this.selected, childVm);
-          }
-        });
+  methods: {
+    checkChildren: function checkChildren() {
+      if (this.$children.length === 0) {
+        console && console.warn && console.warn('tabs的子组件应该是tabs-head和tabs-pane，但你没写子组件');
       }
-    });
+    },
+    selectTab: function selectTab() {
+      var _this = this;
+
+      this.$children.forEach(function (vm) {
+        if (vm.$options.name = 'GuluTabsHead') {
+          vm.$children.forEach(function (childVm) {
+            if (childVm.$options.name === 'GuluTabsItem' && childVm.name === _this.selected) {
+              _this.eventBus.$emit('update:selected', _this.selected, childVm);
+            }
+          });
+        }
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.checkChildren();
+    this.selectTab();
   }
 }; //
 //
@@ -11803,7 +11857,7 @@ exports.default = {
           left = _vm$$el$getBoundingCl.left;
 
       _this.$refs.line.style.width = width + 'px';
-      _this.$refs.line.style.left = left - 550 + 'px';
+      _this.$refs.line.style.left = left - 590 + 'px';
     });
   }
 };
@@ -12081,6 +12135,218 @@ render._withStripped = true
       
       }
     })();
+},{"_css_loader":"node_modules\\_parcel-bundler@1.9.7@parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.common.js"}],"src\\popover.vue":[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+exports.default = {
+  name: "GuluPopover",
+  props: {
+    position: {
+      type: String,
+      default: 'top',
+      validate: function validate(value) {
+        return ['top', 'right', 'bottom', 'left'].indexOf(value) >= 0;
+      }
+    },
+    trigger: {
+      type: String,
+      default: 'click',
+      validate: function validate(value) {
+        return ['click', 'hover'].indexOf()(value) >= 0;
+      }
+    }
+  },
+  data: function data() {
+    return { visible: false };
+  },
+
+  computed: {
+    openEvent: function openEvent() {
+      if (this.trigger === 'click') {
+        return 'click';
+      } else {
+        return 'mouseenter';
+      }
+    },
+    closeEvent: function closeEvent() {
+      if (this.trigger === 'click') {
+        return 'click';
+      } else {
+        return 'mouseleave';
+      }
+    }
+  },
+  mounted: function mounted() {
+    if (this.trigger === 'click') {
+      this.$refs.popover.addEventListener('click', this.onClick);
+    } else {
+      this.$refs.popover.addEventListener('mouseenter', this.open);
+      this.$refs.popover.addEventListener('mouseleave', this.close);
+    }
+  },
+
+  methods: {
+    positionContent: function positionContent() {
+      document.body.appendChild(this.$refs.contentWrapper);
+      var _$refs = this.$refs,
+          contentWrapper = _$refs.contentWrapper,
+          triggerWrapper = _$refs.triggerWrapper;
+
+      var _triggerWrapper$getBo = triggerWrapper.getBoundingClientRect(),
+          top = _triggerWrapper$getBo.top,
+          left = _triggerWrapper$getBo.left,
+          height = _triggerWrapper$getBo.height,
+          width = _triggerWrapper$getBo.width;
+
+      var _contentWrapper$getBo = contentWrapper.getBoundingClientRect(),
+          height2 = _contentWrapper$getBo.height;
+
+      var _contentWrapper$getBo2 = contentWrapper.getBoundingClientRect(),
+          right2 = _contentWrapper$getBo2.right;
+
+      var positions = {
+        top: {
+          top: top + window.scrollY,
+          left: left + window.scrollX
+        },
+        bottom: {
+          top: top + height + window.scrollY,
+          left: left + window.scrollX
+        },
+        left: {
+          top: top + window.scrollY + (height - height2) / 2,
+          left: left + window.scrollX
+        },
+        right: {
+          left: left + window.scrollX + width,
+          top: top + window.scrollY + (height - height2) / 2
+        }
+      };
+      contentWrapper.style.top = positions[this.position].top + 'px';
+      contentWrapper.style.left = positions[this.position].left + 'px';
+    },
+    eventHandler: function eventHandler(e) {
+      if (this.$refs.popover && (this.$refs.popover === e.target || this.$refs.popover.contains(e.target))) {
+        return;
+      }
+      if (this.$refs.contentWrapper && (this.$refs.contentWrapper === e.target || this.$refs.contentWrapper.contains(e.target))) {
+        return;
+      }
+      this.close();
+    },
+    open: function open() {
+      var _this = this;
+
+      this.visible = true;
+      this.$nextTick(function () {
+        _this.positionContent();
+        document.addEventListener('click', _this.eventHandler);
+      });
+    },
+    close: function close() {
+      this.visible = false;
+      document.removeEventListener('click', this.eventHandler);
+    },
+    onClick: function onClick(event) {
+      if (this.$refs.triggerWrapper.contains(event.target)) {
+        if (this.visible === true) {
+          this.close();
+        } else {
+          this.open();
+        }
+      }
+    }
+  }
+};
+        var $4ced24 = exports.default || module.exports;
+      
+      if (typeof $4ced24 === 'function') {
+        $4ced24 = $4ced24.options;
+      }
+    
+        /* template */
+        Object.assign($4ced24, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { ref: "popover", staticClass: "popover" }, [
+    _vm.visible
+      ? _c(
+          "div",
+          {
+            ref: "contentWrapper",
+            staticClass: "content-wrapper",
+            class: ((_obj = {}),
+            (_obj["position-" + _vm.position] = true),
+            _obj)
+          },
+          [_vm._t("content", null, { close: _vm.close })],
+          2
+        )
+      : _vm._e(),
+    _vm._v(" "),
+    _c(
+      "span",
+      {
+        ref: "triggerWrapper",
+        staticClass: "button-style",
+        staticStyle: { display: "inline-block" }
+      },
+      [_vm._t("default")],
+      2
+    )
+  ])
+  var _obj
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: "data-v-4ced24",
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$4ced24', $4ced24);
+          } else {
+            api.reload('$4ced24', $4ced24);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
 },{"_css_loader":"node_modules\\_parcel-bundler@1.9.7@parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.common.js"}],"src\\app.js":[function(require,module,exports) {
 'use strict';
 
@@ -12160,6 +12426,10 @@ var _tabsPane = require('./tabs-pane');
 
 var _tabsPane2 = _interopRequireDefault(_tabsPane);
 
+var _popover = require('./popover');
+
+var _popover2 = _interopRequireDefault(_popover);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _vue2.default.component('g-button', _button2.default);
@@ -12179,6 +12449,7 @@ _vue2.default.component('g-tabs-head', _tabsHead2.default);
 _vue2.default.component('g-tabs-body', _tabsBody2.default);
 _vue2.default.component('g-tabs-item', _tabsItem2.default);
 _vue2.default.component('g-tabs-pane', _tabsPane2.default);
+_vue2.default.component('g-popover', _popover2.default);
 
 _vue2.default.use(_plugin2.default);
 
@@ -12208,7 +12479,7 @@ new _vue2.default({
     }
   }
 });
-},{"vue":"node_modules\\vue\\dist\\vue.common.js","./button":"src\\button.vue","./icon":"src\\icon.vue","./button-group":"src\\button-group.vue","./input":"src\\input.vue","./row":"src\\row.vue","./col":"src\\col.vue","./layout":"src\\layout.vue","./content":"src\\content.vue","./header":"src\\header.vue","./footer":"src\\footer.vue","./slider":"src\\slider.vue","./toast":"src\\toast.vue","./plugin":"src\\plugin.js","./tabs":"src\\tabs.vue","./tabs-body":"src\\tabs-body.vue","./tabs-head":"src\\tabs-head.vue","./tabs-item":"src\\tabs-item.vue","./tabs-pane":"src\\tabs-pane.vue"}],"node_modules\\_parcel-bundler@1.9.7@parcel-bundler\\src\\builtins\\hmr-runtime.js":[function(require,module,exports) {
+},{"vue":"node_modules\\vue\\dist\\vue.common.js","./button":"src\\button.vue","./icon":"src\\icon.vue","./button-group":"src\\button-group.vue","./input":"src\\input.vue","./row":"src\\row.vue","./col":"src\\col.vue","./layout":"src\\layout.vue","./content":"src\\content.vue","./header":"src\\header.vue","./footer":"src\\footer.vue","./slider":"src\\slider.vue","./toast":"src\\toast.vue","./plugin":"src\\plugin.js","./tabs":"src\\tabs.vue","./tabs-body":"src\\tabs-body.vue","./tabs-head":"src\\tabs-head.vue","./tabs-item":"src\\tabs-item.vue","./tabs-pane":"src\\tabs-pane.vue","./popover":"src\\popover.vue"}],"node_modules\\_parcel-bundler@1.9.7@parcel-bundler\\src\\builtins\\hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -12237,7 +12508,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '50891' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '55220' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
